@@ -28,6 +28,10 @@ import ca.ucalgary.seng300.simulation.*;
 import powerutility.NoPowerException;
 import powerutility.PowerGrid;
 
+/**
+ * A class for testing the AbstractCoinValidator class and it's related interfaces and observers.
+ */
+
 public class AbstractCVTest {
 	private Currency currency = Currency.getInstance("CAD");
 	private List<BigDecimal> coinDenominations = new ArrayList<>(Arrays.asList(new BigDecimal(0.05)));

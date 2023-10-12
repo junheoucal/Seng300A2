@@ -15,7 +15,14 @@ import com.tdc.IComponent;
 import com.tdc.IComponentObserver;
 import com.tdc.coin.*;
 
+/**
+ * Is a stub to isolate the behaviour of the CoinValidatorObserver
+ */
+
 public class ValidatorObserverStub implements CoinValidatorObserver {
+	/**
+	 * Used to test whether the validCoinDetected event is announced
+	 */
 	public boolean validCoin = false;
 
 	@Override
@@ -41,12 +48,20 @@ public class ValidatorObserverStub implements CoinValidatorObserver {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	/**
+	 * Used to test if validCoinDetected event is called
+	 */
+	
 	@Override
 	public void validCoinDetected(AbstractCoinValidator validator, BigDecimal value) {
 		validCoin = true;
 	}
 
+	/**
+	 * Used to test if invalidCoinDetected event is called
+	 */
+	
 	@Override
 	public void invalidCoinDetected(AbstractCoinValidator validator) {
 		validCoin = false;
